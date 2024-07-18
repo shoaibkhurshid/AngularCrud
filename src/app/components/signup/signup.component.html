@@ -1,0 +1,21 @@
+
+
+
+<div class="login-container">
+    <h2>Sign Up</h2>
+    <form class="container"  #registerForm="ngForm">
+        <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username"  required  ngModel #email="ngModel" name="email">
+            <h6 class="text-danger" [hidden]="email.valid || email.untouched">Please enter correct email</h6>
+        </div>
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" required  ngModel #password="ngModel" name="password">
+            <h6 class="text-danger" [hidden]="password.valid || password.untouched">password length must be  > 6</h6>
+        </div>
+        <button type="submit"  class="btn btn-suceess" (click)="register(registerForm)">Register</button>
+    </form>
+</div>
+
+

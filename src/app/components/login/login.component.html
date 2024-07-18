@@ -1,0 +1,21 @@
+
+
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="" [formGroup]="loginform">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required [formControl]="email">
+                <h6 class="text-danger" [hidden]="email.valid || email.untouched">Please enter correct email</h6>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required [formControl]="password">
+                <h6 class="text-danger" [hidden]="password.valid || password.untouched">password length must be  > 6</h6>
+            </div>
+            <button type="submit"  class="btn btn-suceess" (click)="login()">Login</button>
+        </form>
+    </div>
+
+
